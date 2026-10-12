@@ -17,6 +17,9 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 search_tool = TavilySearchResults(max_results=2)
 result = search_tool.invoke("give me the latest news on AI")
+
+
+
 tools = [search_tool]
 
 llm = ChatOllama(
@@ -50,9 +53,9 @@ inputs = {
 
 print("--- Running Agent ---")
 for event in agent.stream(inputs, stream_mode="debug"):
-    print(event)
-    # for node_name, state_update in chunk.items():
-    #     print(f"\n[Node: {node_name}]")
-    #     # Pretty printing the state additions (e.g., the prompt, tool calls, and tool outputs)
-    #     for msg in state_update.get("messages", []):
-    #         msg.pretty_print()
+    # print(event)
+    for node_name, state_update in chunk.items():
+    print(f"\n[Node: {node_name}]")
+    # Pretty printing the state additions (e.g., the prompt, tool calls, and tool outputs)
+    for msg in state_update.get("messages", []):
+            msg.pretty_print()
