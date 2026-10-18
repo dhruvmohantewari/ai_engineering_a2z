@@ -7,7 +7,7 @@ from tavily import TavilyClient
 import tavily
 from bs4 import BeautifulSoup
 from readability import Document
-import trafilature
+import trafilatura
 import re
 
 

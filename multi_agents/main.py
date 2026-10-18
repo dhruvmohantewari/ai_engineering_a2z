@@ -1,5 +1,5 @@
-from src.tools.tools import web_search
-from rich import print
+from src.pipeline.pipeline import run_research_pipeline
 
-result = web_search("latest new on AI research")
-print(result)
+topic = "impact of ai job market in 2026"
+
+run_research_pipeline(topic)

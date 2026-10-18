@@ -6,6 +6,7 @@ readme = "README.md"
 authors = [{ name = "dhruvmohantewari", email = "dhruvmohan048@gmail.com" }]
 requires-python = ">=3.14"
 dependencies = [
+  "beautifulsoup4>=4.15.0",
   "ipykernel>=7.4.0",
   "jupyter-client>=8.10.0",
   "jupytext>=1.19.6",
@@ -16,12 +17,17 @@ dependencies = [
   "langchainhub>=0.1.21",
   "langgraph>=1.2.14",
   "langsmith>=0.14.7",
+  "lxml>=6.1.3",
   "notebook>=7.6.3",
   "pynvim>=0.6.0",
   "python-dotenv>=1.2.4",
+  "readability>=0.3.2",
+  "readability-lxml>=0.9",
   "requests>=2.34.2",
   "rich>=15.0.0",
+  "streamlit>=1.65.0",
   "tavily-python>=0.8.5",
+  "trafilatura>=2.3.1",
 ]
 
 [tool.uv]
